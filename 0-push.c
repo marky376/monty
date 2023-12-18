@@ -6,7 +6,7 @@
  * Return: no return
  */
 
-void f_push(stack_t **stack, unsigned int current)
+void f_push(stack_t **stack, unsigned int line_number)
 {
 	char *tokn = strtok(NULL, " \t\n");
 	int value;
@@ -14,7 +14,7 @@ void f_push(stack_t **stack, unsigned int current)
 
 	if (!tokn)
 	{
-		fprintf(stderr, "L%u: usage: push integer\n", current);
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	value = atoi(tokn);
