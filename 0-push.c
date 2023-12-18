@@ -1,12 +1,18 @@
 #include "monty.h"
+/**
+ * f_push - add node to the stack
+ * @stack: stack head
+ * @current: line number
+ * Return: no return
+ */
 
 void f_push(stack_t **stack, unsigned int current)
 {
 	char *tokn = strtok(NULL, " \t\n");
 	int value;
 	stack_t *new_node;
-	
-	if(!tokn)
+
+	if (!tokn)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", current);
 		exit(EXIT_FAILURE);

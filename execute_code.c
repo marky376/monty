@@ -1,4 +1,11 @@
 #include "monty.h"
+/**
+ * execute_opcode - executes the opcode
+ * @opcode: line content
+ * @stack: head linked list
+ * @current: line counter
+ * Return: no return
+ */
 
 void execute_opcode(char *opcode, stack_t **stack, unsigned int current)
 {
