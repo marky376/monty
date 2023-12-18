@@ -7,7 +7,7 @@
  * Return: no return
  */
 
-void execute_opcode(char *opcode, stack_t **stack, unsigned int current)
+void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number)
 {
 	if (strcmp(opcode, "push") == 0)
 		f_push(stack, line_number);
